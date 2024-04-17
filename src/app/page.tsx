@@ -1,6 +1,8 @@
 import { index } from "drizzle-orm/mysql-core";
 import { url } from "inspector";
 
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   const mockUrls = [
     "https://utfs.io/f/88487f8e-fc86-4513-b0a1-4c1cdfe8be3c-ttbe2f.webp",
@@ -15,7 +17,7 @@ export default function HomePage() {
   }));
 
   return (
-    <main className="">
+    <main className="px-4">
       <div className="flex flex-wrap gap-4">
         {mockImages.map((image) => (
           <div key={image.id} className="w-48">
